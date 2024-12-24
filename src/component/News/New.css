@@ -1,0 +1,45 @@
+.newMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+}
+.newContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.newForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.newTitle h2 {
+  width: 550px;
+  font-size: 36px;
+  font-family: var(---main--font--family);
+  font-style: var(---main--font--style);
+  color: rgba(251, 221, 187, 1);
+}
+.newTitle p {
+  width: 470px;
+  color: rgba(251, 221, 187, 1);
+  font-family: var(---main--font--family);
+  font-style: var(---main--font--style);
+}
+.newInput {
+  padding: 10px 50px;
+}
+.newBtn {
+  padding: 12px 30px;
+  outline: none;
+  border: none;
+  border: transparent;
+  background-color: rgba(251, 221, 187, 1);
+  border-radius: 5px;
+  cursor: pointer;
+}
