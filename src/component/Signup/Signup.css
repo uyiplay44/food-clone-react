@@ -60,7 +60,12 @@ input {
   text-transform: uppercase;
   border-radius: 5.5px;
 }
-.signinLink p {
-  margin-left: 20px;
+.signinLink {
+  margin: 20px;
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* gap: 1rem; */
 }

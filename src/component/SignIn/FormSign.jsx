@@ -4,7 +4,7 @@ import "./SignIn.css";
 function FormSign() {
   return (
     <div className="formmain">
-      <h1>Welcome to Lilies!</h1>
+      <h1>Welcome Back!</h1>
       <form>
         <div>
           <input type="text" placeholder="Enter email" name="email" />
@@ -19,9 +19,8 @@ function FormSign() {
         </div>
         <button className="signupBtn">Sigup</button>
         <div className="signinLink">
-          <p>
-            Already have an account? <Link to="/signup">Register</Link>
-          </p>
+          <Link to="/signup">Create Account</Link>
+          <Link to="/">Forget Password</Link>
         </div>
       </form>
     </div>

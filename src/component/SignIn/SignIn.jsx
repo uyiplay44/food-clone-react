@@ -1,4 +1,4 @@
-import signupphoto from "../../assets/Group14.png";
+import signinphoto from "../../assets/Group 13.png";
 
 import FormSign from "./FormSign";
 
@@ -7,7 +7,7 @@ function SignIn() {
     <section>
       <div className="signsection">
         <div className="signupmain">
-          <img src={signupphoto} alt="signupphoto" className="signupimg" />
+          <img src={signinphoto} alt="signinphoto" className="signupimg" />
           <FormSign />
         </div>
       </div>

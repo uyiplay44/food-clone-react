@@ -1,6 +1,6 @@
 import "./Signup.css";
 import signupphoto from "../../assets/Group14.png";
-import Form from "./form";
+import Form from "./Form";
 // import Form from "./form";
 
 function Signup() {
