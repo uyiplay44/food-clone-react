@@ -15,7 +15,7 @@ function FormSign() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/dashboard");
-      toast.success("User created successfully");
+      toast.success("User successfully");
     } catch (error) {
       toast.error("User Invalid");
     }
