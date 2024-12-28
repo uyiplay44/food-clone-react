@@ -1,9 +1,9 @@
-import ProfileSection from "../component/Profile/ProfileSection";
+import DashboardHome from "../component/Home/DashboardHome";
 
 function Dashboard() {
   return (
     <div>
-      <ProfileSection />
+      <DashboardHome />
     </div>
   );
 }
