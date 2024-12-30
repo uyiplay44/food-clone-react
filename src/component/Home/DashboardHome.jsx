@@ -4,7 +4,9 @@ import { CgProfile } from "react-icons/cg";
 import { CiShop } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import profilephoto from "../../assets/Group 12.png"; // import profile photo
+import profilephoto from "../../assets/profile.png"; // import profile photo
+import { LiaHomeSolid } from "react-icons/lia";
+import OrderSection from "../Order/OrderSection";
 
 function DashboardHome() {
   return (
@@ -18,16 +20,22 @@ function DashboardHome() {
           </div>
           <nav className="dashboardNav">
             <Link className="active">
-              <CgProfile />
+              <LiaHomeSolid className="dashIcon" />
+              <h3>Dashbord</h3>
+            </Link>
+            <Link className="active">
+              <CgProfile className="dashIcon" />
               <h3>Your Profile</h3>
             </Link>
             <Link className="active">
-              <CiShop />
+              <CiShop className="dashIcon" />
               <h3>Orders</h3>
+              <span className="span">0</span>
             </Link>
             <Link className="active">
-              <CiShoppingCart />
+              <CiShoppingCart className="dashIcon" />
               <h3>Your Cart</h3>
+              <span className="span2">0</span>
             </Link>
           </nav>
         </div>
@@ -43,8 +51,15 @@ function DashboardHome() {
             </div>
 
             <div>
-              <img src={profilephoto} alt="profilephotos" />
+              <img
+                src={profilephoto}
+                alt="profilephotos"
+                className="profileImg"
+              />
             </div>
+          </div>
+          <div className="dashboardOrder">
+            <OrderSection />
           </div>
         </div>
       </div>
