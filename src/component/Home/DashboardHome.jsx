@@ -7,8 +7,26 @@ import { Link } from "react-router-dom";
 import profilephoto from "../../assets/profile.png"; // import profile photo
 import { LiaHomeSolid } from "react-icons/lia";
 import OrderSection from "../Order/OrderSection";
+import { useEffect, useState } from "react";
 
 function DashboardHome() {
+  const [date, setDate] = useState("");
+  const [userData, setUserData] = useState([]);
+
+  const userid = JSON.parse(localStorage.getItem("userid"));
+
+  useEffect(() => {
+    const currentDate = new Date();
+
+    if (currentDate.getHours() < 12) {
+      setDate("Good Morning");
+    } else if (currentDate.getHours() >= 12 && currentDate.getHours() > 18) {
+      setDate("Good Afternoon");
+    } else if (currentDate.getHours() > 18) {
+      setDate("Good Evening");
+    }
+  }, [userData, userid]);
+
   return (
     <div className="dashboardMain">
       <div className="dashboardContainer">
@@ -46,7 +64,9 @@ function DashboardHome() {
         <div className="dashboardSecondContent">
           <div className="dashboardBar">
             <div>
-              <h1>Good morning, Oghenevwede!</h1>
+              <h1>
+                {date} {userData.username}
+              </h1>
               <p>What delicious meal are you craving today?</p>
             </div>
 
