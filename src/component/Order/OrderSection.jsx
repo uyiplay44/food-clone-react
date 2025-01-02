@@ -1,7 +1,14 @@
 import "./OrderSection.css";
 import OrderList from "./OrderIndex";
+import { useNavigate } from "react-router-dom";
 
 function OrderSection() {
+  const nagivate = useNavigate();
+
+  const handleClick = () => {
+    nagivate("addCart");
+  };
+
   return (
     <div className="orderMain">
       <div className="orderContainer">
@@ -12,7 +19,9 @@ function OrderSection() {
             <p className="orderdescrib">{order.descript}</p>
             <div className="orderPrice">
               <span className="orderList">N1,000</span>
-              <button className="orderBtn">Add to Cart</button>
+              <button type="submit" className="orderBtn" onClick={handleClick}>
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}

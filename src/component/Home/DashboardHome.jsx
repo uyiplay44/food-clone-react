@@ -17,6 +17,7 @@ function DashboardHome() {
 
   useEffect(() => {
     const currentDate = new Date();
+    setUserData(`$(username)`);
 
     if (currentDate.getHours() < 12) {
       setDate("Good Morning");

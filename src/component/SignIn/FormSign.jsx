@@ -17,7 +17,11 @@ function FormSign() {
       navigate("/dashboard");
       toast.success("User successfully");
     } catch (error) {
-      toast.error("User Invalid");
+      if (error.code === "auth/wrong-password") {
+        toast.error("Password Invalid");
+      } else if (error.code === "auth/user-not-found") {
+        toast.error("User Invalid");
+      }
     }
   }
 
