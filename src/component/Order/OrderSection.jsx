@@ -14,7 +14,11 @@ function OrderSection() {
       <div className="orderContainer">
         {OrderList.map((order, id) => (
           <div key={id} className="orderTag">
-            <img src={order.img} alt="orderlist" />
+            <img
+              src={order.img}
+              alt="orderlist"
+              onClick={() => nagivate(`/dashboard/description/${id}`)}
+            />
             <h4>{order.title}</h4>
             <p className="orderdescrib">{order.descript}</p>
             <div className="orderPrice">

@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./Pages/Dashboard";
 import Cart from "./component/Cart/Cart";
+import Description from "./component/Description/Description";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/signin" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="addcart" element={<Cart />} />
+            <Route path="description/:id" element={<Description />} />
           </Route>
         </Routes>
         <ToastContainer
